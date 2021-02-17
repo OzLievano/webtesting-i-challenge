@@ -6,6 +6,13 @@ module.exports = {
 };
 
 function success(item) {
+
+  if(item.enhancement < 20){
+    item.enhancement +=1 ;
+  }else{
+    item.enhancement;
+  }
+
   return { ...item};
 }
 
