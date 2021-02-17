@@ -42,3 +42,10 @@ describe('fail method', ()=>{
         
     })
 })
+
+describe('get method', ()=>{
+    test('test modified name',()=>{
+        enhancer.get(item)
+        expect(item.name).toBe('[+16]screen')
+    })
+})
