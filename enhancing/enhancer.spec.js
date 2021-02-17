@@ -26,3 +26,19 @@ describe('enhancer success method', ()=>{
         expect(item.enhancement).toBe(17);
     })
 })
+
+describe('fail method', ()=>{
+    test('test durability decreasing',()=>{
+        const underFifteen = item.durability - 5;
+        const overFifteen = item.durability - 10;
+        enhancer.fail(item);
+
+        if(item.enhancer < 15){
+            expect(item.durability).toBe(underFifteen);
+        }else{
+            expect(item.durability).toBe(overFifteen);
+            expect(item.enhancement).toBe(16);
+        }
+        
+    })
+})
